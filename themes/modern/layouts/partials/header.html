@@ -1,0 +1,62 @@
+<header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+          </svg>
+        </div>
+        <span class="text-xl font-bold text-gray-900">PIXCON</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">
+            {{ .Name }}
+          </a>
+        {{ end }}
+      </div>
+      
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="/login" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">
+          Login
+        </a>
+        <a href="/signup" class="bg-primary-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/25">
+          Kostenlos starten
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="block py-2 text-gray-600 hover:text-primary-600 font-medium">
+          {{ .Name }}
+        </a>
+      {{ end }}
+      <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
+        <a href="/login" class="block py-2 text-gray-600 hover:text-primary-600 font-medium">Login</a>
+        <a href="/signup" class="block w-full text-center bg-primary-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-primary-700">
+          Kostenlos starten
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</header>

@@ -1,0 +1,31 @@
+baseURL = 'https://example.com/'
+languageCode = 'de-de'
+title = 'PIXCON - Server-Side GTM Hosting'
+theme = 'modern'
+
+[params]
+  description = "Professionelles Server-Side Google Tag Manager Hosting für GDPR-konforme Tracking-Lösungen"
+  author = "PIXCON"
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Features"
+    url = "/features/"
+    weight = 2
+  [[menu.main]]
+    name = "Preise"
+    url = "/pricing/"
+    weight = 3
+  [[menu.main]]
+    name = "Kontakt"
+    url = "/contact/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

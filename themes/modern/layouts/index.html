@@ -1,0 +1,245 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="hero-gradient min-h-screen flex items-center pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center px-4 py-2 bg-primary-500/10 rounded-full mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+          <span class="text-primary-400 text-sm font-medium">99.9% Uptime Garantie</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Server-Side GTM
+          <span class="gradient-text">ohne Kopfschmerzen</span>
+        </h1>
+        
+        <p class="text-xl text-gray-400 mb-8 max-w-lg">
+          Professionelles sGTM Hosting in wenigen Minuten. GDPR-konform, 
+          performant und vollständig gemanagt.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/25">
+            Jetzt starten
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a href="/demo" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Demo ansehen
+          </a>
+        </div>
+        
+        <div class="mt-12 flex items-center gap-8">
+          <div>
+            <div class="text-3xl font-bold text-white">500+</div>
+            <div class="text-gray-500 text-sm">Aktive Container</div>
+          </div>
+          <div class="w-px h-12 bg-gray-700"></div>
+          <div>
+            <div class="text-3xl font-bold text-white">99.9%</div>
+            <div class="text-gray-500 text-sm">Uptime</div>
+          </div>
+          <div class="w-px h-12 bg-gray-700"></div>
+          <div>
+            <div class="text-3xl font-bold text-white">EU</div>
+            <div class="text-gray-500 text-sm">Hosted</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Visual -->
+      <div class="relative hidden lg:block">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
+        <div class="relative bg-gray-800/50 backdrop-blur border border-gray-700 rounded-2xl p-6 animate-float">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-primary-500/20 flex items-center justify-center">
+                <svg class="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div class="flex-1 h-3 bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full"></div>
+              </div>
+              <span class="text-green-400 text-sm font-medium">Container aktiv</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 h-3 bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-full bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+              </div>
+              <span class="text-green-400 text-sm font-medium">SSL aktiv</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 h-3 bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full w-3/4 bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"></div>
+              </div>
+              <span class="text-purple-400 text-sm font-medium">45ms Latenz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trusted By -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-gray-500 mb-8">Vertraut von führenden E-Commerce Unternehmen</p>
+    <div class="flex flex-wrap justify-center items-center gap-12 opacity-50">
+      <div class="text-2xl font-bold text-gray-400">shopware</div>
+      <div class="text-2xl font-bold text-gray-400">WooCommerce</div>
+      <div class="text-2xl font-bold text-gray-400">Shopify</div>
+      <div class="text-2xl font-bold text-gray-400">Magento</div>
+      <div class="text-2xl font-bold text-gray-400">OXID</div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Alles was du für <span class="gradient-text">professionelles Tracking</span> brauchst
+      </h2>
+      <p class="text-xl text-gray-600">
+        Von der einfachen Einrichtung bis zum Enterprise-Setup – wir haben dich abgedeckt.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
+        <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Blitzschnelle Einrichtung</h3>
+        <p class="text-gray-600">
+          Container in unter 5 Minuten live. Keine Server-Kenntnisse erforderlich, 
+          alles vollautomatisch konfiguriert.
+        </p>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
+        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">GDPR-Konform</h3>
+        <p class="text-gray-600">
+          100% EU-hosted mit optionaler Anonymisierung. Erfülle alle 
+          Datenschutzanforderungen ohne Kompromisse.
+        </p>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
+        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Detailliertes Monitoring</h3>
+        <p class="text-gray-600">
+          Echtzeit-Einblicke in Traffic, Performance und Kosten. 
+          Behalte alles im Blick mit unserem Dashboard.
+        </p>
+      </div>
+      
+      <!-- Feature 4 -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
+        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Auto-Scaling</h3>
+        <p class="text-gray-600">
+          Automatische Skalierung bei Traffic-Spitzen. 
+          Black Friday? Kein Problem, wir skalieren mit.
+        </p>
+      </div>
+      
+      <!-- Feature 5 -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
+        <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">API & Webhooks</h3>
+        <p class="text-gray-600">
+          Volle Kontrolle über unsere REST API. Integriere 
+          PIXCON nahtlos in deine bestehende Infrastruktur.
+        </p>
+      </div>
+      
+      <!-- Feature 6 -->
+      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
+        <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+        <p class="text-gray-600">
+          Deutschsprachiger Support von echten GTM-Experten. 
+          Wir helfen bei Setup, Optimierung und Troubleshooting.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-gradient-to-br from-primary-600 to-primary-800">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+      Bereit für besseres Tracking?
+    </h2>
+    <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+      Starte noch heute mit deinem eigenen Server-Side GTM Container. 
+      Keine Kreditkarte erforderlich für den Testmonat.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+        Kostenlos starten
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white rounded-xl font-semibold hover:bg-white/10 transition-all border-2 border-white/30">
+        Demo vereinbaren
+      </a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="pt-32 pb-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">{{ . }}</p>
+      {{ end }}
+    </header>
+    
+    {{ if .Content }}
+      <div class="prose prose-lg prose-primary max-w-none mb-12">
+        {{ .Content }}
+      </div>
+    {{ end }}
+    
+    {{ if .Pages }}
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ range .Pages }}
+          <a href="{{ .Permalink }}" class="bg-white p-6 rounded-2xl border border-gray-100 card-hover block">
+            <h2 class="text-xl font-semibold text-gray-900 mb-2">{{ .Title }}</h2>
+            {{ with .Description }}
+              <p class="text-gray-600">{{ . }}</p>
+            {{ end }}
+            <span class="inline-flex items-center text-primary-600 font-medium mt-4">
+              Mehr erfahren
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
