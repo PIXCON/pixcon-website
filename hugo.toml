@@ -1,4 +1,4 @@
-baseURL = 'https://PIXCON.github.io/pixcon-website/'
+baseURL = '/'
 languageCode = 'de-de'
 title = 'PIXCON - Server-Side GTM Hosting'
 theme = 'modern'

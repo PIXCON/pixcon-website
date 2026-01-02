@@ -3,8 +3,8 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Features | PIXCON - Server-Side GTM Hosting</title>
-  <meta name="description" content="Alle Features die PIXCON zu deiner perfekten sGTM Hosting Lösung machen">
+  <title>Custom Domain | PIXCON - Server-Side GTM Hosting</title>
+  <meta name="description" content="Nutze deine eigene Domain für First-Party Tracking">
   
   
   <script src="https://cdn.tailwindcss.com"></script>
@@ -523,29 +523,87 @@
     
 
 
-<section class="pt-32 pb-16 bg-gradient-to-b from-primary-50 to-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl">
-      <a href="/features/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium mb-6">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        Alle Features
-      </a>
-      <div class="inline-flex items-center px-4 py-2 bg-primary-100 rounded-full mb-6">
-        <span class="text-primary-700 text-sm font-medium">Core Feature</span>
+
+
+
+
+<section class="pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <a href="/features/" class="inline-flex items-center text-gray-400 hover:text-white font-medium mb-8 transition-colors group">
+          <svg class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Alle Features
+        </a>
+        
+        <div class="inline-flex items-center px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-6">
+          <div class="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div>
+          <span class="text-cyan-300 text-sm font-medium">Infrastructure</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Custom<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400">Domain</span>
+        </h1>
+        
+        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+          Nutze deine eigene Subdomain für Server-Side Tracking. First-Party Cookies, kein Ad-Blocker Problem, automatisches SSL.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/signup" class="group inline-flex items-center justify-center px-6 py-3.5 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-all">
+            Kostenlos starten
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="/pricing/" class="inline-flex items-center justify-center px-6 py-3.5 text-white rounded-xl font-semibold transition-all border border-white/20 hover:bg-white/10">
+            Preise ansehen
+          </a>
+        </div>
       </div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-        Server-Side <span class="gradient-text">Tracking</span>
-      </h1>
-      <p class="text-xl text-gray-600 mb-8">
-        Verlagere dein Google Tag Manager Setup auf deinen eigenen Server. Bessere Performance, volle Datenkontrolle und unabhängig von Browser-Einschränkungen.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors">
-          Kostenlos starten
-        </a>
-        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-primary-600 hover:text-primary-600 transition-colors">
-          Demo anfragen
-        </a>
+      
+      
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-3xl blur-2xl opacity-20"></div>
+        <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+          <h3 class="text-lg font-bold text-white mb-6">Deine Domain</h3>
+          
+          <div class="bg-slate-800 rounded-xl p-4 mb-6">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+              <span class="font-mono text-cyan-400">track.deinshop.de</span>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+              <span class="text-gray-400">SSL Status</span>
+              <span class="text-green-400 font-medium flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Aktiv
+              </span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+              <span class="text-gray-400">DNS Status</span>
+              <span class="text-green-400 font-medium flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Verbunden
+              </span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+              <span class="text-gray-400">Cookie Type</span>
+              <span class="text-cyan-400 font-medium">First-Party</span>
+            </div>
+          </div>
+          
+          <div class="mt-6 pt-6 border-t border-white/10 text-center">
+            <span class="text-gray-500 text-sm">Setup in unter 5 Minuten</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -554,87 +612,97 @@
 
 <section class="py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Das Problem mit Client-Side Tracking
-        </h2>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900">Ad-Blocker blockieren Tracking</h3>
-              <p class="text-gray-600">Bis zu 40% deiner Nutzer werden nicht erfasst</p>
-            </div>
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Warum Custom Domain?</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Eine eigene Subdomain macht den Unterschied zwischen Third-Party und First-Party Tracking.</p>
+    </div>
+    
+    <div class="grid lg:grid-cols-2 gap-8">
+      
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5 rounded-3xl"></div>
+        <div class="relative bg-white rounded-3xl p-8 border border-red-100 h-full">
+          <div class="inline-flex items-center px-3 py-1 bg-red-100 rounded-full mb-6">
+            <svg class="w-4 h-4 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span class="text-red-700 text-sm font-medium">Ohne Custom Domain</span>
           </div>
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900">Browser-Einschränkungen</h3>
-              <p class="text-gray-600">ITP, ETP und andere Privacy-Features limitieren Cookies</p>
-            </div>
+          
+          <div class="bg-gray-100 rounded-xl p-4 mb-6 font-mono text-sm">
+            <span class="text-red-500">googletagmanager.com</span>/gtm.js
           </div>
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Ad-Blocker blockieren</h4>
+                <p class="text-gray-600 text-sm">Third-Party Domain wird erkannt und blockiert</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-gray-900">Langsame Ladezeiten</h3>
-              <p class="text-gray-600">Viele Third-Party Scripts belasten deine Website</p>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Cookies nach 7 Tagen gelöscht</h4>
+                <p class="text-gray-600 text-sm">ITP/ETP limitieren Third-Party Cookies</p>
+              </div>
             </div>
-          </div>
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900">Keine Datenkontrolle</h3>
-              <p class="text-gray-600">Daten gehen direkt an Google, Meta & Co.</p>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Datenverlust</h4>
+                <p class="text-gray-600 text-sm">Bis zu 40% der Nutzer nicht erfasst</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="bg-gray-900 rounded-2xl p-8 text-white">
-        <h3 class="text-2xl font-bold mb-6">Die Server-Side Lösung</h3>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold">Bypass Ad-Blocker</h3>
-              <p class="text-gray-400">First-Party Domain wird nicht blockiert</p>
-            </div>
+      
+      
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-cyan-500/5 rounded-3xl"></div>
+        <div class="relative bg-white rounded-3xl p-8 border border-green-100 h-full">
+          <div class="inline-flex items-center px-3 py-1 bg-green-100 rounded-full mb-6">
+            <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-green-700 text-sm font-medium">Mit Custom Domain</span>
           </div>
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold">Längere Cookie-Laufzeiten</h3>
-              <p class="text-gray-400">First-Party Cookies mit bis zu 2 Jahren Laufzeit</p>
-            </div>
+          
+          <div class="bg-gray-100 rounded-xl p-4 mb-6 font-mono text-sm">
+            <span class="text-green-500">track.deinshop.de</span>/gtm.js
           </div>
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Bypass Ad-Blocker</h4>
+                <p class="text-gray-600 text-sm">Deine Domain wird nicht blockiert</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold">Bessere Performance</h3>
-              <p class="text-gray-400">Ein Request statt vieler Third-Party Calls</p>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Cookies bis zu 2 Jahre</h4>
+                <p class="text-gray-600 text-sm">First-Party Cookies ohne Einschränkungen</p>
+              </div>
             </div>
-          </div>
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold">Volle Datenkontrolle</h3>
-              <p class="text-gray-400">Du entscheidest welche Daten wohin gehen</p>
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Alle Nutzer erfassen</h4>
+                <p class="text-gray-600 text-sm">+40% mehr Conversions tracken</p>
+              </div>
             </div>
           </div>
         </div>
@@ -644,43 +712,56 @@
 </section>
 
 
-<section class="py-24 bg-gray-50">
+<section class="py-24 bg-slate-900">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        So funktioniert's
-      </h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Server-Side Tracking in 3 einfachen Schritten
-      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Setup in 3 Schritten</h2>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto">Verbinde deine Domain in unter 5 Minuten. Kein DevOps nötig.</p>
     </div>
     
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="relative">
-        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">1</div>
-        <div class="bg-white rounded-2xl p-8 pt-12 h-full border border-gray-100">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Container erstellen</h3>
-          <p class="text-gray-600">
-            Erstelle einen neuen Container in deinem PIXCON Dashboard. Wir deployen automatisch einen Google Tag Manager Server Container für dich.
-          </p>
+      <div class="relative bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-colors">
+        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">1</div>
+        <h3 class="text-xl font-bold text-white mb-3">Subdomain wählen</h3>
+        <p class="text-gray-400 mb-6">Wähle eine Subdomain für dein Tracking, z.B. track.deinshop.de oder data.deinshop.de</p>
+        <div class="bg-slate-800 rounded-xl p-4 font-mono text-sm">
+          <span class="text-cyan-400">track</span><span class="text-gray-500">.deinshop.de</span>
         </div>
       </div>
-      <div class="relative">
-        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">2</div>
-        <div class="bg-white rounded-2xl p-8 pt-12 h-full border border-gray-100">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Domain verbinden</h3>
-          <p class="text-gray-600">
-            Verbinde deine Custom Domain (z.B. track.deinedomain.de) mit deinem Container. SSL-Zertifikat wird automatisch generiert.
-          </p>
+      
+      <div class="relative bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-colors">
+        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">2</div>
+        <h3 class="text-xl font-bold text-white mb-3">DNS eintragen</h3>
+        <p class="text-gray-400 mb-6">Erstelle einen CNAME-Eintrag bei deinem DNS-Provider.</p>
+        <div class="bg-slate-800 rounded-xl p-4 text-sm space-y-2">
+          <div class="flex justify-between">
+            <span class="text-gray-500">Type</span>
+            <span class="text-white font-mono">CNAME</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-500">Name</span>
+            <span class="text-white font-mono">track</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-500">Value</span>
+            <span class="text-cyan-400 font-mono">proxy.pixcon.de</span>
+          </div>
         </div>
       </div>
-      <div class="relative">
-        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">3</div>
-        <div class="bg-white rounded-2xl p-8 pt-12 h-full border border-gray-100">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Tags konfigurieren</h3>
-          <p class="text-gray-600">
-            Konfiguriere deine Tags im GTM Server Container. Nutze die mitgelieferten Templates oder erstelle eigene.
-          </p>
+      
+      <div class="relative bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-colors">
+        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6">3</div>
+        <h3 class="text-xl font-bold text-white mb-3">Fertig!</h3>
+        <p class="text-gray-400 mb-6">SSL-Zertifikat wird automatisch generiert. Deine Domain ist in Minuten live.</p>
+        <div class="bg-slate-800 rounded-xl p-4 text-sm">
+          <div class="flex items-center text-green-400">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>SSL aktiv</span>
+          </div>
+          <div class="flex items-center text-green-400 mt-2">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Domain verbunden</span>
+          </div>
         </div>
       </div>
     </div>
@@ -691,58 +772,56 @@
 <section class="py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Architektur
-      </h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Alles inklusive</h2>
     </div>
     
-    <div class="bg-white rounded-2xl border border-gray-200 p-8 md:p-12">
-      <div class="grid md:grid-cols-5 gap-4 items-center text-center">
-        
-        <div class="bg-gray-100 rounded-xl p-6">
-          <svg class="w-12 h-12 mx-auto mb-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <h4 class="font-semibold text-gray-900">Browser</h4>
-          <p class="text-sm text-gray-500">Deine Website</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 hover:border-cyan-200 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
         </div>
-        
-        
-        <div class="hidden md:flex justify-center">
-          <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </div>
-        
-        
-        <div class="bg-primary-100 rounded-xl p-6 ring-2 ring-primary-500">
-          <svg class="w-12 h-12 mx-auto mb-3 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
-          <h4 class="font-semibold text-primary-900">PIXCON Server</h4>
-          <p class="text-sm text-primary-700">GTM Server Container</p>
-        </div>
-        
-        
-        <div class="hidden md:flex justify-center">
-          <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </div>
-        
-        
-        <div class="bg-gray-100 rounded-xl p-6">
-          <svg class="w-12 h-12 mx-auto mb-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-          <h4 class="font-semibold text-gray-900">Endpoints</h4>
-          <p class="text-sm text-gray-500">GA4, Meta, TikTok...</p>
-        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Auto SSL</h3>
+        <p class="text-gray-600 text-sm">Let's Encrypt Zertifikat wird automatisch generiert und erneuert.</p>
       </div>
       
-      <div class="mt-8 pt-8 border-t border-gray-100 grid md:grid-cols-3 gap-6 text-center">
-        <div>
-          <div class="text-3xl font-bold text-primary-600">~50ms</div>
-          <div class="text-sm text-gray-500">Durchschnittliche Latenz</div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 hover:border-cyan-200 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-primary-600">99.9%</div>
-          <div class="text-sm text-gray-500">Uptime SLA</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Global CDN</h3>
+        <p class="text-gray-600 text-sm">Edge-Server weltweit für minimale Latenz.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 hover:border-cyan-200 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-primary-600">EU</div>
-          <div class="text-sm text-gray-500">Hosting Location</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">First-Party Cookies</h3>
+        <p class="text-gray-600 text-sm">Cookies werden als First-Party erkannt. Keine Browser-Einschränkungen.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 hover:border-cyan-200 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Instant Setup</h3>
+        <p class="text-gray-600 text-sm">Domain in unter 5 Minuten verbunden und live.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 hover:border-cyan-200 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Auto-Renewal</h3>
+        <p class="text-gray-600 text-sm">SSL-Zertifikate werden automatisch erneuert. Zero Downtime.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 hover:border-cyan-200 hover:shadow-lg transition-all">
+        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Multi-Domain</h3>
+        <p class="text-gray-600 text-sm">Verbinde mehrere Domains pro Container.</p>
       </div>
     </div>
   </div>
@@ -752,82 +831,49 @@
 <section class="py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Vorteile von Server-Side Tracking
-      </h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Funktioniert mit jedem DNS-Provider</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Egal wo deine Domain gehostet ist – ein einfacher CNAME-Eintrag genügt.</p>
     </div>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl p-8 border border-gray-100">
-        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Mehr Daten erfassen</h3>
-        <p class="text-gray-600">Erfasse bis zu 40% mehr Conversions durch Umgehung von Ad-Blockern und Browser-Einschränkungen.</p>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-8 border border-gray-100">
-        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Bessere Performance</h3>
-        <p class="text-gray-600">Reduziere die Anzahl der Client-Side Scripts und verbessere deine Core Web Vitals.</p>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-8 border border-gray-100">
-        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Datenkontrolle</h3>
-        <p class="text-gray-600">Kontrolliere welche Daten an welche Plattformen gesendet werden. PII-Filterung inklusive.</p>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-8 border border-gray-100">
-        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">GDPR-Konformität</h3>
-        <p class="text-gray-600">EU-Hosting und Daten-Anonymisierung helfen dir bei der GDPR-Compliance.</p>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-8 border border-gray-100">
-        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Zukunftssicher</h3>
-        <p class="text-gray-600">Unabhängig von Third-Party Cookie Deprecation und Browser-Privacy Features.</p>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-8 border border-gray-100">
-        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Bessere Attribution</h3>
-        <p class="text-gray-600">Längere Cookie-Laufzeiten ermöglichen bessere Cross-Session Attribution.</p>
-      </div>
+    <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+      <div class="text-2xl font-bold text-gray-500">Cloudflare</div>
+      <div class="text-2xl font-bold text-gray-500">AWS Route53</div>
+      <div class="text-2xl font-bold text-gray-500">Google DNS</div>
+      <div class="text-2xl font-bold text-gray-500">Namecheap</div>
+      <div class="text-2xl font-bold text-gray-500">GoDaddy</div>
+      <div class="text-2xl font-bold text-gray-500">IONOS</div>
+      <div class="text-2xl font-bold text-gray-500">Hetzner</div>
+      <div class="text-2xl font-bold text-gray-500">DigitalOcean</div>
     </div>
   </div>
 </section>
 
 
-<section class="py-24 bg-gradient-to-br from-primary-600 to-primary-800">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-      Bereit für besseres Tracking?
-    </h2>
-    <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-      Starte jetzt mit Server-Side Tracking und erfasse bis zu 40% mehr Conversions.
-    </p>
+<section class="py-24 bg-gradient-to-br from-cyan-600 via-cyan-700 to-blue-700 relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Deine Domain, dein Tracking</h2>
+    <p class="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">Verbinde deine Custom Domain und tracke als First-Party.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-        14 Tage kostenlos testen
+      <a href="/signup" class="group inline-flex items-center justify-center px-8 py-4 bg-white text-cyan-600 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg shadow-black/10">
+        Kostenlos starten
+        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
-      <a href="/pricing/" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-colors border border-white/20">
-        Preise ansehen
-      </a>
+      <a href="/features/server-side-tracking/" class="inline-flex items-center justify-center px-8 py-4 text-white rounded-xl font-semibold transition-all border-2 border-white/30 hover:bg-white/10">Server-Side Tracking</a>
+    </div>
+    <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm text-cyan-200">
+      <div class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Auto SSL</div>
+      <div class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5 Min Setup</div>
+      <div class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>First-Party Cookies</div>
     </div>
   </div>
 </section>
+
+
 
 
   </main>

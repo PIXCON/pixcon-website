@@ -1,102 +1,430 @@
 {{ define "main" }}
 
-<!-- Hero Section -->
-<section class="hero-gradient min-h-screen flex items-center pt-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <div class="inline-flex items-center px-4 py-2 bg-primary-500/10 rounded-full mb-6">
-          <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-          <span class="text-primary-400 text-sm font-medium">99.9% Uptime Garantie</span>
+<!-- HERO SECTION - Blue with Floating Glass Widgets -->
+<section class="pt-32 pb-24 bg-gradient-to-br from-pixcon-600 via-pixcon-700 to-pixcon-800 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-pixcon-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pixcon-300/10 rounded-full blur-3xl"></div>
+  </div>
+  
+  <!-- Floating Animation Keyframes -->
+  <style>
+    @keyframes float-slow { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    @keyframes float-medium { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes float-fast { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+    .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+    .animate-float-medium { animation: float-medium 5s ease-in-out infinite; }
+    .animate-float-fast { animation: float-fast 4s ease-in-out infinite; }
+  </style>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="relative min-h-[70vh] flex items-center justify-center">
+      
+      <!-- Left Floating Widgets -->
+      <div class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-64">
+        <!-- Live Events Widget -->
+        <div class="animate-float-slow backdrop-blur-md bg-white/10 rounded-xl border border-white/20 p-3 absolute -top-20 left-0 w-56">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+            </span>
+            <span class="text-white/80 text-xs font-medium">Live Events</span>
+          </div>
+          <div class="space-y-1 font-mono text-xs">
+            <div class="flex items-center gap-2 p-1 bg-white/5 rounded text-xs">
+              <span class="w-1 h-1 rounded-full bg-green-400"></span>
+              <span class="text-white/40">12:45:32</span>
+              <span class="text-pixcon-300 text-xs">purchase</span>
+            </div>
+            <div class="flex items-center gap-2 p-1 bg-white/5 rounded text-xs">
+              <span class="w-1 h-1 rounded-full bg-green-400"></span>
+              <span class="text-white/40">12:45:31</span>
+              <span class="text-pixcon-300 text-xs">add_to_cart</span>
+            </div>
+          </div>
         </div>
         
+        <!-- Ad-Blocker Badge -->
+        <div class="animate-float-medium backdrop-blur-md bg-white/10 rounded-xl border border-white/20 p-3 absolute top-24 left-8 w-44">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-green-500/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <div class="text-white/80 text-xs font-medium">Ad-Blocker</div>
+              <div class="text-green-400 text-xs">Bypassed ✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Center Content -->
+      <div class="text-center max-w-3xl mx-auto px-8">
+        <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur border border-white/20 rounded-full mb-6">
+          <span class="relative flex h-2 w-2 mr-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+          </span>
+          <span class="text-white/90 text-sm font-medium">500+ aktive Container</span>
+        </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          Server-Side GTM
-          <span class="gradient-text">ohne Kopfschmerzen</span>
+          Server-Side GTM<br>
+          <span class="text-pixcon-300">ohne Limits.</span>
         </h1>
-        
-        <p class="text-xl text-gray-400 mb-8 max-w-lg">
-          Professionelles sGTM Hosting in wenigen Minuten. GDPR-konform, 
-          performant und vollständig gemanagt.
+        <p class="text-xl text-white/70 mb-8 leading-relaxed max-w-xl mx-auto">
+          Die einzige Plattform die <span class="text-pixcon-300 font-semibold">Ad-Blocker umgeht</span>. 
+          GDPR-konform. EU-hosted. In 5 Minuten live.
         </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/25">
-            Jetzt starten
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+          <a href="/signup" class="inline-flex items-center justify-center px-6 py-3.5 bg-white text-pixcon-700 font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
+            Kostenlos starten
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
-          <a href="/demo" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-all border border-white/20">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+          <a href="#demo" class="inline-flex items-center justify-center px-6 py-3.5 bg-white/10 backdrop-blur text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             Demo ansehen
           </a>
         </div>
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+          <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Keine Kreditkarte</div>
+          <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5 Min Setup</div>
+          <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>EU Hosted</div>
+        </div>
+      </div>
+      
+      <!-- Right Floating Widgets -->
+      <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-64">
+        <!-- Stats Widget -->
+        <div class="animate-float-medium backdrop-blur-md bg-white/10 rounded-xl border border-white/20 p-3 absolute -top-16 right-4 w-48">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-white/80 text-xs font-medium">Performance</span>
+            <span class="text-green-400 text-xs font-bold">99.9%</span>
+          </div>
+          <div class="h-1.5 bg-white/10 rounded-full">
+            <div class="h-1.5 bg-green-400 rounded-full" style="width: 99.9%"></div>
+          </div>
+        </div>
         
-        <div class="mt-12 flex items-center gap-8">
-          <div>
-            <div class="text-3xl font-bold text-white">500+</div>
-            <div class="text-gray-500 text-sm">Aktive Container</div>
+        <!-- Latency Widget -->
+        <div class="animate-float-fast backdrop-blur-md bg-white/10 rounded-xl border border-white/20 p-3 absolute top-12 right-0 w-36">
+          <div class="flex items-center justify-between">
+            <span class="text-white/50 text-xs">Latency</span>
+            <span class="text-lg font-bold text-white">42<span class="text-xs font-normal text-white/50">ms</span></span>
           </div>
-          <div class="w-px h-12 bg-gray-700"></div>
-          <div>
-            <div class="text-3xl font-bold text-white">99.9%</div>
-            <div class="text-gray-500 text-sm">Uptime</div>
-          </div>
-          <div class="w-px h-12 bg-gray-700"></div>
-          <div>
-            <div class="text-3xl font-bold text-white">EU</div>
-            <div class="text-gray-500 text-sm">Hosted</div>
+        </div>
+        
+        <!-- Container Badge -->
+        <div class="animate-float-slow backdrop-blur-md bg-white/10 rounded-xl border border-white/20 p-3 absolute top-32 right-12 w-40">
+          <div class="flex items-center justify-between">
+            <span class="text-white/80 text-xs">Container</span>
+            <span class="px-2 py-0.5 bg-green-500/20 text-green-400 text-xs font-medium rounded">LIVE</span>
           </div>
         </div>
       </div>
       
-      <!-- Hero Visual -->
-      <div class="relative hidden lg:block">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
-        <div class="relative bg-gray-800/50 backdrop-blur border border-gray-700 rounded-2xl p-6 animate-float">
-          <div class="flex items-center gap-2 mb-4">
-            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section class="py-16 bg-white border-y border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-gray-400 text-sm font-medium mb-10">Sende Tracking-Daten direkt an alle großen Plattformen</p>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+      <div class="group flex flex-col items-center">
+        <div class="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-2 group-hover:bg-blue-100 transition-colors">
+          <svg class="w-7 h-7 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 008.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+        </div>
+        <span class="text-xs font-medium text-gray-500">Meta CAPI</span>
+      </div>
+      <div class="group flex flex-col items-center">
+        <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center mb-2 group-hover:bg-gray-100 transition-colors">
+          <svg class="w-7 h-7" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <span class="text-xs font-medium text-gray-500">Google</span>
+      </div>
+      <div class="group flex flex-col items-center">
+        <div class="w-14 h-14 rounded-xl bg-gray-900 flex items-center justify-center mb-2 group-hover:bg-black transition-colors">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
+        </div>
+        <span class="text-xs font-medium text-gray-500">TikTok</span>
+      </div>
+      <div class="group flex flex-col items-center">
+        <div class="w-14 h-14 rounded-xl bg-yellow-50 flex items-center justify-center mb-2 group-hover:bg-yellow-100 transition-colors">
+          <svg class="w-7 h-7 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301a.776.776 0 01.464-.104c.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03a1.67 1.67 0 01-.32-.044c-.22-.045-.449-.074-.689-.074-.3 0-.614.044-.944.134-.39.104-1.108.449-1.978.449h-.105c-.87 0-1.588-.345-1.993-.449-.33-.09-.629-.134-.944-.134-.24 0-.469.029-.704.074a1.67 1.67 0 01-.31.044h-.029c-.285 0-.48-.134-.555-.405a3.231 3.231 0 01-.135-.553c-.044-.195-.104-.479-.163-.57-1.873-.283-2.906-.702-3.147-1.271a.521.521 0 01-.044-.225c-.015-.24.164-.465.419-.509 3.266-.54 4.732-3.878 4.792-4.014l.014-.015c.182-.344.211-.644.121-.869-.195-.449-.884-.674-1.333-.809-.136-.045-.255-.09-.346-.12-.823-.328-1.227-.719-1.212-1.168 0-.359.284-.689.734-.839.15-.06.328-.089.51-.089.12 0 .299.015.463.104.39.181.734.285 1.034.3.197 0 .324-.044.4-.089a8.167 8.167 0 01-.031-.51l-.003-.06c-.105-1.628-.231-3.654.299-4.847C7.859 1.07 11.216.793 12.206.793z"/></svg>
+        </div>
+        <span class="text-xs font-medium text-gray-500">Snapchat</span>
+      </div>
+      <div class="group flex flex-col items-center">
+        <div class="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-2 group-hover:bg-red-100 transition-colors">
+          <svg class="w-7 h-7 text-red-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-4.373 23.178c-.018-.937-.004-2.065.234-3.084l1.711-7.248s-.424-.85-.424-2.105c0-1.971 1.143-3.443 2.566-3.443 1.21 0 1.795.909 1.795 1.998 0 1.218-.776 3.037-.176 4.727.504 1.416 1.682 2.421 2.817 2.421 3.382 0 5.649-4.348 5.649-9.492 0-3.913-2.636-6.841-7.433-6.841-5.418 0-8.796 4.043-8.796 8.555 0 1.556.459 2.654 1.179 3.502.331.392.378.55.258 1.001-.086.329-.284 1.124-.365 1.438-.119.46-.484.625-.894.455-2.49-1.016-3.648-3.74-3.648-6.809 0-5.058 4.265-11.128 12.732-11.128 6.802 0 11.269 4.925 11.269 10.208 0 6.986-3.885 12.208-9.608 12.208-1.922 0-3.73-1.038-4.349-2.211 0 0-.1.392-.319 1.251-.273 1.06-.852 2.122-1.382 2.951A12 12 0 1012 0z"/></svg>
+        </div>
+        <span class="text-xs font-medium text-gray-500">Pinterest</span>
+      </div>
+      <div class="group flex flex-col items-center">
+        <div class="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-2 group-hover:bg-blue-100 transition-colors">
+          <svg class="w-6 h-6 text-blue-700" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        <span class="text-xs font-medium text-gray-500">LinkedIn</span>
+      </div>
+    </div>
+    <div class="mt-10 text-center">
+      <a href="/features/gateways/" class="inline-flex items-center text-pixcon-600 font-medium hover:text-pixcon-700 transition-colors">
+        +20 weitere Plattformen
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 1 - Text Left, Widget Right (Problem) -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="inline-flex items-center px-3 py-1 bg-red-100 text-red-700 text-sm font-medium rounded-full mb-4">Das Problem</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Du verlierst <span class="text-red-500">40%</span> deiner Daten</h2>
+        <p class="text-lg text-gray-500 mb-8 leading-relaxed">Ad-Blocker, ITP, Cookie-Restrictions – klassisches Client-Side Tracking funktioniert nicht mehr. Deine Pixel werden blockiert, Cookies nach 7 Tagen gelöscht.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200">
+            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span class="text-gray-700">40% Datenverlust durch Ad-Blocker</span>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200">
+            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span class="text-gray-700">Cookies nach 7 Tagen gelöscht (ITP)</span>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200">
+            <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span class="text-gray-700">GDPR-Risiken mit Third-Party Cookies</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+              <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900">Client-Side Tracking</div>
+              <div class="text-sm text-red-500">⚠️ Daten gehen verloren</div>
+            </div>
+          </div>
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl opacity-50">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+              <span class="text-sm text-gray-400 line-through">purchase - €149.00</span>
+              <span class="ml-auto text-xs text-red-500 font-medium">BLOCKED</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl opacity-50">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+              <span class="text-sm text-gray-400 line-through">add_to_cart - SKU-8847</span>
+              <span class="ml-auto text-xs text-red-500 font-medium">BLOCKED</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-xl">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              <span class="text-sm text-gray-700">page_view - /products</span>
+              <span class="ml-auto text-xs text-green-600 font-medium">OK</span>
+            </div>
+          </div>
+          <div class="bg-red-50 rounded-xl p-4">
+            <div class="flex justify-between mb-2"><span class="text-sm text-gray-600">Erfasste Conversions</span><span class="text-sm font-bold text-red-500">60%</span></div>
+            <div class="w-full h-3 bg-red-100 rounded-full"><div class="h-3 bg-red-400 rounded-full" style="width: 60%"></div></div>
+          </div>
+        </div>
+        <div class="absolute -z-10 -top-4 -right-4 w-full h-full bg-red-100 rounded-2xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 2 - Widget Left, Text Right (Solution) -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative order-2 lg:order-1">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900">Server-Side Tracking</div>
+              <div class="text-sm text-green-500">✓ 100% Datenerfassung</div>
+            </div>
+          </div>
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-xl">
+              <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>
+              <span class="text-sm text-gray-700">purchase - €149.00</span>
+              <span class="ml-auto text-xs text-green-600 font-medium">✓ SENT</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-xl">
+              <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>
+              <span class="text-sm text-gray-700">add_to_cart - SKU-8847</span>
+              <span class="ml-auto text-xs text-green-600 font-medium">✓ SENT</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-xl">
+              <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>
+              <span class="text-sm text-gray-700">page_view - /products</span>
+              <span class="ml-auto text-xs text-green-600 font-medium">✓ SENT</span>
+            </div>
+          </div>
+          <div class="bg-green-50 rounded-xl p-4">
+            <div class="flex justify-between mb-2"><span class="text-sm text-gray-600">Erfasste Conversions</span><span class="text-sm font-bold text-green-600">100%</span></div>
+            <div class="w-full h-3 bg-green-100 rounded-full"><div class="h-3 bg-green-500 rounded-full" style="width: 100%"></div></div>
+          </div>
+        </div>
+        <div class="absolute -z-10 -top-4 -left-4 w-full h-full bg-pixcon-100 rounded-2xl"></div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full mb-4">Die Lösung</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6"><span class="text-pixcon-600">100%</span> deiner Daten erfassen</h2>
+        <p class="text-lg text-gray-500 mb-8 leading-relaxed">Mit PIXCON umgehst du Ad-Blocker und ITP-Restrictions. Dein Tracking läuft über deine eigene Domain – unsichtbar für Browser-Einschränkungen.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-gray-700">100% Datenerfassung – Ad-Blocker umgangen</span>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-gray-700">First-Party Cookies – volle Kontrolle</span>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-gray-700">+30% bessere Attribution bei Meta & Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLUE DIVIDER - Stats -->
+<section class="py-20 bg-pixcon-600">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div><div class="text-4xl md:text-5xl font-bold text-white mb-2">500+</div><div class="text-pixcon-200">Aktive Container</div></div>
+      <div><div class="text-4xl md:text-5xl font-bold text-white mb-2">99.9%</div><div class="text-pixcon-200">Uptime</div></div>
+      <div><div class="text-4xl md:text-5xl font-bold text-white mb-2">50ms</div><div class="text-pixcon-200">Avg. Latenz</div></div>
+      <div><div class="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div><div class="text-pixcon-200">Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 3 - Text Left, Widget Right (GDPR) -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full mb-4">GDPR Compliance</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">100% <span class="text-pixcon-600">GDPR-konform</span></h2>
+        <p class="text-lg text-gray-500 mb-8 leading-relaxed">Alle Daten bleiben in der EU. Mit unserer Anonymisierungs-Funktion kannst du sogar ohne Consent-Banner tracken – vollständig rechtskonform.</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200">
+            <div class="w-8 h-8 rounded-lg bg-pixcon-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-pixcon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div><div class="font-semibold text-gray-900">EU-Hosting</div><div class="text-sm text-gray-500">Alle Server in Frankfurt, Deutschland</div></div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200">
+            <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div><div class="font-semibold text-gray-900">Anonymisierung</div><div class="text-sm text-gray-500">16 Parameter für vollständige Pseudonymisierung</div></div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200">
+            <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div><div class="font-semibold text-gray-900">Consent-Banner-frei</div><div class="text-sm text-gray-500">Tracking ohne Cookie-Banner möglich</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div><div class="font-semibold text-gray-900">Anonymisierung</div><div class="text-xs text-gray-500">16 Parameter aktiv</div></div>
+            </div>
+            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">AKTIV</span>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-primary-500/20 flex items-center justify-center">
-                <svg class="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <div class="flex-1 h-3 bg-gray-700 rounded-full overflow-hidden">
-                <div class="h-full w-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full"></div>
-              </div>
-              <span class="text-green-400 text-sm font-medium">Container aktiv</span>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl"><span class="text-sm text-gray-700">IP-Adresse</span><div class="w-10 h-6 bg-green-500 rounded-full relative"><div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow"></div></div></div>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl"><span class="text-sm text-gray-700">User Agent</span><div class="w-10 h-6 bg-green-500 rounded-full relative"><div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow"></div></div></div>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl"><span class="text-sm text-gray-700">Client ID</span><div class="w-10 h-6 bg-green-500 rounded-full relative"><div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow"></div></div></div>
+            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl"><span class="text-sm text-gray-700">Referrer URL</span><div class="w-10 h-6 bg-green-500 rounded-full relative"><div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow"></div></div></div>
+          </div>
+          <div class="mt-4 p-3 bg-green-50 rounded-xl text-center"><span class="text-sm text-green-700 font-medium">✓ GDPR-konform ohne Consent-Banner</span></div>
+        </div>
+        <div class="absolute -z-10 -top-4 -right-4 w-full h-full bg-green-100 rounded-2xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 4 - Widget Left, Text Right (Tools) -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative order-2 lg:order-1">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-6">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-pixcon-100 flex items-center justify-center">
+              <svg class="w-5 h-5 text-pixcon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
             </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
-                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-              </div>
-              <div class="flex-1 h-3 bg-gray-700 rounded-full overflow-hidden">
-                <div class="h-full w-full bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
-              </div>
-              <span class="text-green-400 text-sm font-medium">SSL aktiv</span>
+            <div><div class="font-semibold text-gray-900">Toolbox</div><div class="text-xs text-gray-500">6 Tools verfügbar</div></div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+              <div class="w-8 h-8 rounded-lg bg-pixcon-100 flex items-center justify-center mb-2"><svg class="w-4 h-4 text-pixcon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></div>
+              <div class="text-sm font-medium text-gray-900">GTM Debugger</div>
+              <div class="text-xs text-gray-500">2.4k users</div>
             </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <div class="flex-1 h-3 bg-gray-700 rounded-full overflow-hidden">
-                <div class="h-full w-3/4 bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"></div>
-              </div>
-              <span class="text-purple-400 text-sm font-medium">45ms Latenz</span>
+            <div class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+              <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mb-2"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div class="text-sm font-medium text-gray-900">Tag Validator</div>
+              <div class="text-xs text-gray-500">3.1k users</div>
             </div>
+            <div class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+              <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center mb-2"><svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg></div>
+              <div class="text-sm font-medium text-gray-900">DataLayer</div>
+              <div class="text-xs text-gray-500">1.8k users</div>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+              <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center mb-2"><svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+              <div class="text-sm font-medium text-gray-900">Analytics</div>
+              <div class="text-xs text-gray-500">2.2k users</div>
+            </div>
+          </div>
+          <a href="/features/tools/" class="mt-4 flex items-center justify-center gap-2 p-3 bg-pixcon-50 text-pixcon-600 font-medium rounded-xl hover:bg-pixcon-100 transition-colors">
+            Alle Tools ansehen <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="absolute -z-10 -top-4 -left-4 w-full h-full bg-pixcon-100 rounded-2xl"></div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <span class="inline-flex items-center px-3 py-1 bg-pixcon-100 text-pixcon-700 text-sm font-medium rounded-full mb-4">Developer Tools</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kostenlose <span class="text-pixcon-600">Pro-Tools</span></h2>
+        <p class="text-lg text-gray-500 mb-8 leading-relaxed">GTM Debugger, Tag Validator, DataLayer Inspector – alle Tools die du für professionelles Tracking brauchst. Kostenlos für alle PIXCON Nutzer.</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+            <div class="w-8 h-8 rounded-lg bg-pixcon-100 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-pixcon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg></div>
+            <div><div class="font-semibold text-gray-900">Real-Time Debugging</div><div class="text-sm text-gray-500">Events live mitverfolgen und analysieren</div></div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+            <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div><div class="font-semibold text-gray-900">Automatische Validierung</div><div class="text-sm text-gray-500">Tags gegen Best Practices prüfen</div></div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+            <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg></div>
+            <div><div class="font-semibold text-gray-900">Export & Reports</div><div class="text-sm text-gray-500">Daten exportieren und teilen</div></div>
           </div>
         </div>
       </div>
@@ -104,140 +432,49 @@
   </div>
 </section>
 
-<!-- Trusted By -->
-<section class="py-16 bg-gray-50">
+<!-- HOW IT WORKS -->
+<section class="py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-center text-gray-500 mb-8">Vertraut von führenden E-Commerce Unternehmen</p>
-    <div class="flex flex-wrap justify-center items-center gap-12 opacity-50">
-      <div class="text-2xl font-bold text-gray-400">shopware</div>
-      <div class="text-2xl font-bold text-gray-400">WooCommerce</div>
-      <div class="text-2xl font-bold text-gray-400">Shopify</div>
-      <div class="text-2xl font-bold text-gray-400">Magento</div>
-      <div class="text-2xl font-bold text-gray-400">OXID</div>
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center px-3 py-1 bg-pixcon-100 text-pixcon-700 text-sm font-medium rounded-full mb-4">So funktioniert's</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">In 3 Schritten zum Erfolg</h2>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto">Kein kompliziertes Setup. Keine technischen Vorkenntnisse nötig.</p>
     </div>
-  </div>
-</section>
-
-<!-- Features Section -->
-<section class="py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Alles was du für <span class="gradient-text">professionelles Tracking</span> brauchst
-      </h2>
-      <p class="text-xl text-gray-600">
-        Von der einfachen Einrichtung bis zum Enterprise-Setup – wir haben dich abgedeckt.
-      </p>
-    </div>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Feature 1 -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
-        <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Blitzschnelle Einrichtung</h3>
-        <p class="text-gray-600">
-          Container in unter 5 Minuten live. Keine Server-Kenntnisse erforderlich, 
-          alles vollautomatisch konfiguriert.
-        </p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-2xl bg-pixcon-600 text-white text-2xl font-bold flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pixcon-600/30">1</div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Container erstellen</h3>
+        <p class="text-gray-500">Registriere dich und erstelle deinen ersten Container mit einem Klick.</p>
       </div>
-      
-      <!-- Feature 2 -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
-        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">GDPR-Konform</h3>
-        <p class="text-gray-600">
-          100% EU-hosted mit optionaler Anonymisierung. Erfülle alle 
-          Datenschutzanforderungen ohne Kompromisse.
-        </p>
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-2xl bg-pixcon-600 text-white text-2xl font-bold flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pixcon-600/30">2</div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Domain verbinden</h3>
+        <p class="text-gray-500">Verbinde deine Custom Domain. Wir kümmern uns um SSL und DNS.</p>
       </div>
-      
-      <!-- Feature 3 -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
-        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Detailliertes Monitoring</h3>
-        <p class="text-gray-600">
-          Echtzeit-Einblicke in Traffic, Performance und Kosten. 
-          Behalte alles im Blick mit unserem Dashboard.
-        </p>
-      </div>
-      
-      <!-- Feature 4 -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
-        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Auto-Scaling</h3>
-        <p class="text-gray-600">
-          Automatische Skalierung bei Traffic-Spitzen. 
-          Black Friday? Kein Problem, wir skalieren mit.
-        </p>
-      </div>
-      
-      <!-- Feature 5 -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
-        <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">API & Webhooks</h3>
-        <p class="text-gray-600">
-          Volle Kontrolle über unsere REST API. Integriere 
-          PIXCON nahtlos in deine bestehende Infrastruktur.
-        </p>
-      </div>
-      
-      <!-- Feature 6 -->
-      <div class="bg-white p-8 rounded-2xl border border-gray-100 card-hover">
-        <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
-        <p class="text-gray-600">
-          Deutschsprachiger Support von echten GTM-Experten. 
-          Wir helfen bei Setup, Optimierung und Troubleshooting.
-        </p>
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-2xl bg-green-500 text-white text-2xl font-bold flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">✓</div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Tracking live!</h3>
+        <p class="text-gray-500">Dein Server-Side Tracking ist live. 100% der Daten werden erfasst.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-24 bg-gradient-to-br from-primary-600 to-primary-800">
+<!-- CTA -->
+<section class="py-24 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-      Bereit für besseres Tracking?
-    </h2>
-    <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-      Starte noch heute mit deinem eigenen Server-Side GTM Container. 
-      Keine Kreditkarte erforderlich für den Testmonat.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
-        Kostenlos starten
-        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Bereit für 100% deiner Daten?</h2>
+    <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">Starte noch heute mit deinem eigenen Server-Side GTM Container. Keine Kreditkarte. Kein Risiko.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+      <a href="/signup" class="inline-flex items-center justify-center px-8 py-4 bg-pixcon-600 text-white font-semibold rounded-xl hover:bg-pixcon-700 transition-colors shadow-lg shadow-pixcon-600/20 text-lg">
+        Kostenlos starten <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white rounded-xl font-semibold hover:bg-white/10 transition-all border-2 border-white/30">
-        Demo vereinbaren
-      </a>
+      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-colors text-lg">Demo vereinbaren</a>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+      <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Keine Kreditkarte</div>
+      <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5 Minuten Setup</div>
+      <div class="flex items-center"><svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Jederzeit kündbar</div>
     </div>
   </div>
 </section>
